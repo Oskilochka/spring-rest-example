@@ -1,23 +1,12 @@
-package com.example.demo.model;
+package com.example.rest.dto;
 
-import com.example.demo.entity.Task;
-
-public class TaskModel {
+public class TaskDto {
     private Long id;
     private String title;
     private String description;
     private Boolean completed;
 
-    public static TaskModel toModel(Task task) {
-        TaskModel taskModel = new TaskModel();
-        taskModel.setId(task.getId());
-        taskModel.setTitle(task.getTitle());
-        taskModel.setDescription(task.getDescription());
-        taskModel.setCompleted(task.getCompleted());
-        return taskModel;
-    }
-
-    public TaskModel() {
+    public TaskDto() {
     }
 
     public Long getId() {

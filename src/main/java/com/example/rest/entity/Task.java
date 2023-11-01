@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.example.rest.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
@@ -27,7 +27,7 @@ public class Task {
     }
 
     public void setId(Long id) {
-        id = id;
+        this.id = id;
     }
 
     public String getTitle() {

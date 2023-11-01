@@ -1,6 +1,6 @@
-package com.example.demo.repository;
+package com.example.rest.repository;
 
-import com.example.demo.entity.User;
+import com.example.rest.entity.User;
 import org.springframework.data.repository.CrudRepository;
 
 // Repo is working with DB layer

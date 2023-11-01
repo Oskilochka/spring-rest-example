@@ -1,4 +1,4 @@
-package com.example.demo.exceptions;
+package com.example.rest.exceptions;
 
 public class UserAlreadyExistException extends Exception {
     public UserAlreadyExistException(String message) {

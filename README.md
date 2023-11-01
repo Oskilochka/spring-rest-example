@@ -1,9 +1,11 @@
+### Example of Spring Boot REST Application 
 
-1. To work with this repo you need to have MySQl on your device. 
-2. OPen a terminal and use this commands:
-- mysql -u root -p 
-- show databases; ( to check existed db)
+1. You need to have MySQl on your device. 
+2. To work with DB open a terminal, and you can use this commands:
+- mysql -u root -p; 
+- show databases;
 - create database db_name;
 - use db_name;
 - show tables; (- in current DB)
-- show columns from userEntity;  ( etc )
+- show columns from userEntity; 
+- etc.
