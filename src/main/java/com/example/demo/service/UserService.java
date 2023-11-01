@@ -41,4 +41,9 @@ public class UserService {
                 .map(UserModel::toModel)
                 .collect(Collectors.toList());
     }
+
+    public Long deleteUser(Long userId) {
+        userRepository.deleteById(userId);
+        return userId;
+    }
 }

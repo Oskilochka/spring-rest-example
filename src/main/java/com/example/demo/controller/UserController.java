@@ -46,4 +46,13 @@ public class UserController {
             return ResponseEntity.badRequest().body("Something went wrong");
         }
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity deleteUser(@PathVariable Long id) {
+        try {
+            return ResponseEntity.ok("User with id: " + userService.deleteUser(id) + " was deleted successfully");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Something went wrong");
+        }
+    }
 }
