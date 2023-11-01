@@ -2,7 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.User;
 import com.example.demo.exceptions.UserAlreadyExistException;
-import com.example.demo.repository.UserRepository;
+import com.example.demo.exceptions.UserNotFoundException;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -28,10 +28,13 @@ public class UserController {
     public ResponseEntity getUser(@RequestParam Long id) {
         try {
             return ResponseEntity.ok(userService.getUser(id));
+        } catch (UserNotFoundException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Something went wrong");
         }
     }
+
     @PostMapping
     public ResponseEntity registration(@RequestBody User user) {
         try {
