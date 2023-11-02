@@ -15,10 +15,20 @@ public class User {
     private String username;
     private String password;
 
+    private String email;
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     public List<Task> taskList;
 
     public User() {
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public List<Task> getTaskList() {

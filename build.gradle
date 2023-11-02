@@ -21,6 +21,9 @@ dependencies {
     implementation 'mysql:mysql-connector-java:8.0.28'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    runtimeOnly 'org.flywaydb:flyway-gradle-plugin:3.0'
+    implementation 'org.flywaydb:flyway-mysql:9.22.3'
+
 }
 
 tasks.named('test') {
